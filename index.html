@@ -35,15 +35,14 @@
       <p>test info</p>
     </div>
     <div class="row">
-      <div>
-        <div id="vis1" class="column"></div>
-      </div>
-      <div>
-        <div id="vis2" class="column"></div>
-      </div>
+      <div id="vis1" class="column"></div>
+      <div id="vis2" class="column"></div>
     </div>
     <div class="row">
       <div id="vis3" class="column"></div>
+    </div>
+    <div class="row">
+      <div id="vis4" class="column"></div>
     </div>
   </div>
   
@@ -52,6 +51,7 @@
     var spec1 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
     var spec2 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
     var spec3 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/income_state_map.json";
+    var spec4 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/county_pop_scatter.json";
     
     vegaEmbed('#vis1', spec1, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -60,6 +60,9 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis4', spec4, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
       </script>
