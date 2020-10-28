@@ -6,13 +6,13 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@[VERSION]"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@[VERSION]"></script>
-</head>
+  </head>
 <body>
 
 <div id="vis"></div>
 
 <script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
