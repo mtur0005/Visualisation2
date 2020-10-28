@@ -32,7 +32,7 @@
   <div class="page">
     <div class="row">
       <h1>Average Income in the United States of America</h1>
-      <p>test info 2</p>
+      <p>test info</p>
     </div>
     <div class="row">
       <div>
@@ -42,17 +42,24 @@
         <div id="vis2" class="column"></div>
       </div>
     </div>
+    <div class="row">
+      <div id="vis3" class="column"></div>
+    </div>
   </div>
   
   
   <script type="text/javascript">
     var spec1 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
     var spec2 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
+    var spec3 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/income_state_map.json";
     
     vegaEmbed('#vis1', spec1, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
     vegaEmbed('#vis2', spec2, {"actions": false}).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis3', spec3, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
       </script>
