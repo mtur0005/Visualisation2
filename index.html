@@ -15,22 +15,23 @@
   <div>
     <div>
       <div id="vis1"></div>
-      <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
-        vegaEmbed('#vis1', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-      </script>
     </div>
     <div>
       <div id="vis2"></div>
-      <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
-        vegaEmbed('#vis2', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-      </script>
     </div>
   </div>
+  
+  
+  <script type="text/javascript">
+    var spec1 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
+    var spec2 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
+    
+    vegaEmbed('#vis1', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#vis2', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+      </script>
 </body>
 </html>
