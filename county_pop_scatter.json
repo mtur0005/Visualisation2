@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A scatterplot showing population and mean income of the counties in each state of USA.",
+  "title": {"text": "Mean income of each County in the USA", "fontSize": 20},
+  "height": 400,
+  "width": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/data/county_population.csv"
+  },
+  "params": [
+    {
+      "name": "State_Selector",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Alabama",
+          "Alaska",
+          "Arizona",
+          "Arkansas",
+          "California",
+          "Colorado",
+          "Connecticut",
+          "Delaware",
+          "Florida",
+          "Georgia",
+          "Hawaii",
+          "Idaho",
+          "Illinois",
+          "Indiana",
+          "Iowa",
+          "Kansas",
+          "Kentucky",
+          "Louisiana",
+          "Maine",
+          "Maryland",
+          "Massachusetts",
+          "Michigan",
+          "Minnesota",
+          "Mississippi",
+          "Missouri",
+          "Montana",
+          "Nebraska",
+          "Nevada",
+          "New Hampshire",
+          "New Jersey",
+          "New Mexico",
+          "New York",
+          "North Carolina",
+          "North Dakota",
+          "Ohio",
+          "Oklahoma",
+          "Oregon",
+          "Pennsylvania",
+          "Rhode Island",
+          "South Carolina",
+          "South Dakota",
+          "Tennessee",
+          "Texas",
+          "Utah",
+          "Vermont",
+          "Virginia",
+          "Washington",
+          "West Virginia",
+          "Wisconsin",
+          "Wyoming"
+        ],
+        "labels": ["Show All"],
+        "name": "State Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.State_Name == State_Selector || State_Selector == null"}
+  ],
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"tickCount": 5}
+    },
+    "y": {
+      "field": "Mean_Income",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "title": "Income (USD)",
+      "axis": {"tickCount": 5}
+    },
+    "color": {"field": "County", "type": "nominal"},
+    "shape": {"field": "County", "type": "nominal"},
+    "size": {"value": 150},
+    "tooltip": [
+      {"field": "State_Name", "type": "nominal", "title": "State"},
+      {"field": "County", "type": "nominal"},
+      {
+        "field": "Mean_Income",
+        "type": "quantitative",
+        "title": "Mean Income (USD)"
+      },
+      {"field": "Population", "type": "quantitative", "title": "Population"}
+    ]
+  },
+  "config": {"legend": {"disable": true}}
+}
