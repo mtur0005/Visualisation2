@@ -1,7 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A scatterplot showing population and mean income of the counties in each state of USA.",
-  "title": {"text": "Mean income of each County in the USA", "fontSize": 20},
+  "description": "A scatterplot showing population and mean income of the counties in each state of the USA.",
+  "title": {
+    "text": "Mean income of each County in the USA", 
+    "fontSize": 20
+  },
   "height": 400,
   "width": 600,
   "data": {
