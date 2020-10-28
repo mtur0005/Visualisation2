@@ -6,6 +6,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>  
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    
+     <style>
+    
+    .pure-g{
+      margin-bottom: 25px;
+       }
+    
+  </style>
+    
   </head>
 <body>
   <div class="row">
@@ -26,10 +35,10 @@
     var spec1 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
     var spec2 = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
     
-    vegaEmbed('#vis1', spec1).then(function(result) {
+    vegaEmbed('#vis1', spec1, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
-    vegaEmbed('#vis2', spec2).then(function(result) {
+    vegaEmbed('#vis2', spec2, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
       </script>
