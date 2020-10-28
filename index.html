@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@[VERSION]"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@[VERSION]"></script>
-  <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@[VERSION]"></script>
+  <head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->  
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>  
+    <!-- Import vega-embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
   </head>
 <body>
-<p>Test</p>
-
-<div id="vis">
+  <p>Test</p>
+  
+<div id="vis"></div>
 
 <script type="text/javascript">
   var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
@@ -18,13 +18,5 @@
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-</div>
-  
-<div id="vis" class="vega-embed has-actions"><div class="chart-wrapper" role="graphics-document" aria-roledescription="visualization" aria-label="A simple bar chart with embedded data." style="cursor: default;"><canvas width="286" height="308" class="marks" style="width: 229px; height: 247px;"></canvas><form class="vega-bindings"></form></div><details title="Click to view actions" open=""><summary>
-<svg viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-  <circle r="2" cy="8" cx="2"></circle>
-  <circle r="2" cy="8" cx="8"></circle>
-  <circle r="2" cy="8" cx="14"></circle>
-</svg></summary><div class="vega-actions"><a href="#" target="_blank" download="visualization.svg">Save as SVG</a><a href="#" target="_blank" download="visualization.png">Save as PNG</a><a href="#">View Source</a><a href="#">View Compiled Vega</a><a href="#">Open in Vega Editor</a></div></details></div>
-</body>
+  </body>
 </html>
