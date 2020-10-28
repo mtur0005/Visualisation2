@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A line chart that shows the mean income each year in the USA",
+  "title": {"text": "History of Mean Income in USA", "fontSize": 20},
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/data/gender_year_income.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 3},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"tickCount": 8}
+        },
+        "y": {
+          "field": "Total_Mean",
+          "type": "quantitative",
+          "title": "Income (USD)",
+          "axis": {"tickCount": 5, "grid": false}
+        }
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 40},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "title": "Year",
+          "axis": {"tickCount": 8}
+        },
+        "y": {
+          "field": "Total_Mean",
+          "type": "quantitative",
+          "title": "Income (USD)",
+          "axis": {"tickCount": 5, "grid": false}
+        },
+        "color": {"field": "Year", "scale": {"range": ["#ca8861", "#ca8861"]}},
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "timeUnit": "year",
+            "title": "Year"
+          },
+          {
+            "field": "Total_Mean",
+            "type": "quantitative",
+            "title": "Mean Income (USD)"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {"legend": {"disable": true}}
+}
