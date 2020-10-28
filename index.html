@@ -12,13 +12,23 @@
     <h1>Average Income in the United States of America</h1>
     <p>test info</p>
   </div>
-  
-<div id="vis"></div>
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
-  vegaEmbed('#vis', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <div>
+    <div id="vis"></div>
+    <script type="text/javascript">
+      var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/history_income_line.json";
+      vegaEmbed('#vis', spec).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+    
+    <div id="vis"></div>
+    <script type="text/javascript">
+      var spec = "https://raw.githubusercontent.com/mtur0005/Visualisation2/main/plots/gender_income_bar.json";
+      vegaEmbed('#vis', spec).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+    </script>
+    
+  </div>
   </body>
 </html>
