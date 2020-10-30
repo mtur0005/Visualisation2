@@ -1,0 +1,24 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+.row{
+    margin-bottom: 25px;
+    }
+    
+.column {
+    float: left;
+    padding: 5px;
+    }
+    
+.page{
+    width: 1300px;    
+    background-color: white;   
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+    }
+       
+h1{
+    font-weight: 900;
+    }
